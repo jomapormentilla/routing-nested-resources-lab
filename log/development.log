@@ -612,3 +612,835 @@ Processing by SongsController#show as HTML
   [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
   Rendered songs/show.html.erb within layouts/application (14.2ms)
 Completed 200 OK in 46ms (Views: 21.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-11 20:46:55.731749"], ["updated_at", "2021-01-11 20:46:55.731749"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "The Killers"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Mr. Brightside"], ["created_at", "2021-01-11 20:47:05.419895"], ["updated_at", "2021-01-11 20:47:05.419895"], ["artist_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "The Killers"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Jenny Was a Friend of Mine"], ["created_at", "2021-01-11 20:47:05.423183"], ["updated_at", "2021-01-11 20:47:05.423183"], ["artist_id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Tommy Tutone"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Jenny"], ["created_at", "2021-01-11 20:47:05.425852"], ["updated_at", "2021-01-11 20:47:05.425852"], ["artist_id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Daft Punk"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Around the World"], ["created_at", "2021-01-11 20:47:05.428486"], ["updated_at", "2021-01-11 20:47:05.428486"], ["artist_id", 3]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Daft Punk"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Harder, Better, Faster, Stronger"], ["created_at", "2021-01-11 20:47:05.432176"], ["updated_at", "2021-01-11 20:47:05.432176"], ["artist_id", 3]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Pixies"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Where is My Mind?"], ["created_at", "2021-01-11 20:47:05.435768"], ["updated_at", "2021-01-11 20:47:05.435768"], ["artist_id", 4]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Pixies"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Gigantic"], ["created_at", "2021-01-11 20:47:05.438856"], ["updated_at", "2021-01-11 20:47:05.438856"], ["artist_id", 4]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Pixies"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Monkey Gone to Heaven"], ["created_at", "2021-01-11 20:47:05.441626"], ["updated_at", "2021-01-11 20:47:05.441626"], ["artist_id", 4]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/artists" for ::1 at 2021-01-11 16:00:27 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 649ms (Views: 563.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/artists/1/songs" for ::1 at 2021-01-11 16:00:41 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (2.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered songs/index.html.erb within layouts/application (48.7ms)
+Completed 200 OK in 119ms (Views: 70.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/songs" for ::1 at 2021-01-11 16:01:40 -0500
+Processing by SongsController#index as HTML
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered songs/index.html.erb within layouts/application (66.6ms)
+Completed 200 OK in 84ms (Views: 81.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/artists/1/songs" for ::1 at 2021-01-11 16:01:51 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered songs/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists/30/songs" for ::1 at 2021-01-11 16:01:56 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"30"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Artist with 'id'=30):
+  
+app/controllers/songs_controller.rb:4:in `index'
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.8ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jomapormentilla__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___3562530791692879934_70273623493680 at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (67.6ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (133.0ms)
+Started GET "/artists/30/songs" for ::1 at 2021-01-11 16:02:29 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"30"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :artist_id=>"30", :controller=>"artists"} missing required keys: [:id]):
+  
+app/controllers/songs_controller.rb:10:in `index'
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.3ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jomapormentilla__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___3562530791692879934_70273588972360 at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.1ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (114.6ms)
+Started GET "/artists/30/songs" for ::1 at 2021-01-11 16:02:51 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"30"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/artists" for ::1 at 2021-01-11 16:02:51 -0500
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 63ms (Views: 58.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/artists/1/songs" for ::1 at 2021-01-11 16:05:22 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered songs/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 66ms (Views: 42.7ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/artists/1/songs/1" for ::1 at 2021-01-11 16:05:26 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"1"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT ?[0m  [["artist_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 17.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists/1/songs/100" for ::1 at 2021-01-11 16:05:29 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"100"}
+  [1m[36mArtist Load (1.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT ?[0m  [["artist_id", 1], ["id", 100], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"index", :artist_id=>nil, :controller=>"songs"} missing required keys: [:artist_id]):
+  
+app/controllers/songs_controller.rb:23:in `show'
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.5ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.0ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jomapormentilla__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___3562530791692879934_70273623216520 at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (55.1ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (117.4ms)
+Started GET "/artists/1/songs/100" for ::1 at 2021-01-11 16:06:30 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"100"}
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 6.2ms)
+
+
+  
+NoMethodError (undefined method `songs' for nil:NilClass):
+  
+app/controllers/songs_controller.rb:19:in `show'
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.1ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.9ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (3.6ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jomapormentilla__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___3562530791692879934_70273620336900 at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.9ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (126.4ms)
+Started GET "/artists/1/songs/100" for ::1 at 2021-01-11 16:07:21 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"100"}
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/artists
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"index", :artist_id=>nil, :controller=>"songs"} missing required keys: [:artist_id]):
+  
+app/controllers/songs_controller.rb:28:in `show'
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jomapormentilla__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___3562530791692879934_70273668196800 at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (27.1ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (2.5ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (75.7ms)
+Started GET "/artists/1/songs/100" for ::1 at 2021-01-11 16:07:39 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"100"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT ?[0m  [["artist_id", 1], ["id", 100], ["LIMIT", 1]]
+Redirected to http://localhost:3000/artists/1/songs
+Completed 302 Found in 23ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/artists/1/songs" for ::1 at 2021-01-11 16:07:39 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered songs/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 47ms (Views: 39.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/1/songs" for ::1 at 2021-01-11 16:13:47 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered songs/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 38ms (Views: 26.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/songs/9" for ::1 at 2021-01-11 16:13:51 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered songs/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/songs/9" for ::1 at 2021-01-11 16:13:56 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered songs/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/1" for ::1 at 2021-01-11 16:13:57 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 26ms (Views: 21.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists/1/songs" for ::1 at 2021-01-11 16:14:02 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered songs/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/artists/1/songs/1" for ::1 at 2021-01-11 16:14:07 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND (1) LIMIT ?[0m  [["artist_id", 1], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/1/songs/100" for ::1 at 2021-01-11 16:14:10 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"100"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND (100) LIMIT ?[0m  [["artist_id", 1], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists/1/songs/100" for ::1 at 2021-01-11 16:14:12 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"100"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND (100) LIMIT ?[0m  [["artist_id", 1], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists/1/songs/100" for ::1 at 2021-01-11 16:14:29 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"100"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND (100) LIMIT ?[0m  [["artist_id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 1.8ms)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<SongsController:0x00007fd3b4777b00>):
+  
+app/controllers/songs_controller.rb:21:in `show'
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.8ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.1ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jomapormentilla__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___3562530791692879934_70273668090680 at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (83.5ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (190.3ms)
+Started GET "/artists/1/songs/100" for ::1 at 2021-01-11 16:14:47 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"100"}
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND (100) LIMIT ?[0m  [["artist_id", 1], ["LIMIT", 1]]
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32399ms (Views: 7.8ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/artists/1/songs/100" for ::1 at 2021-01-11 16:15:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"100"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT ?[0m  [["artist_id", 1], ["id", 100], ["LIMIT", 1]]
+Redirected to http://localhost:3000/artists/1/songs
+Completed 302 Found in 6686ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/artists/1/songs" for ::1 at 2021-01-11 16:15:46 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered songs/index.html.erb within layouts/application (50.4ms)
+Completed 200 OK in 402ms (Views: 364.8ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/artists/1" for ::1 at 2021-01-11 16:16:54 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 29ms (Views: 23.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/artists/10/songs/1" for ::1 at 2021-01-11 16:17:05 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"10", "id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `songs' for nil:NilClass):
+  
+app/controllers/songs_controller.rb:20:in `show'
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.3ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jomapormentilla__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___1811426959303688786_70196540758940 at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (69.2ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (128.5ms)
+Started GET "/artists/1/songs" for ::1 at 2021-01-11 16:19:54 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (2.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered songs/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 48ms (Views: 27.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/songs/10" for ::1 at 2021-01-11 16:19:58 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered songs/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists/1" for ::1 at 2021-01-11 16:20:01 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists/1" for ::1 at 2021-01-11 16:21:57 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (1.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 69ms (Views: 51.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/artists/1/songs/1" for ::1 at 2021-01-11 16:22:44 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"1"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT ?[0m  [["artist_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 27859ms (Views: 22.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/artists/1" for ::1 at 2021-01-11 16:23:16 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/artists/10/songs/1" for ::1 at 2021-01-11 16:23:21 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"10", "id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 404 Not Found in 124460ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Artist with 'id'=10):
+  
+app/controllers/songs_controller.rb:20:in `show'
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (3.7ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jomapormentilla__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___1811426959303688786_70196541242640 at /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (66.0ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered /Users/jomapormentilla/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (133.7ms)
+Started GET "/artists/1" for ::1 at 2021-01-11 16:25:33 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/1" for ::1 at 2021-01-11 16:26:35 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (2.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 93ms (Views: 63.2ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/artists/2/songs/1" for ::1 at 2021-01-11 16:26:38 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"2", "id"=>"1"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSong Load (0.9ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT ?[0m  [["artist_id", 2], ["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/artists/2/songs
+Completed 302 Found in 7963ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/2/songs" for ::1 at 2021-01-11 16:26:46 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 2]]
+  Rendered songs/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 47ms (Views: 40.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists/1" for ::1 at 2021-01-11 16:26:56 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/1" for ::1 at 2021-01-11 16:27:29 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/artists/1" for ::1 at 2021-01-11 16:28:04 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/1/songs/2" for ::1 at 2021-01-11 16:28:08 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"2"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT ?[0m  [["artist_id", 1], ["id", 2], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5164ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/1/songs/100" for ::1 at 2021-01-11 16:30:26 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"100"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT ?[0m  [["artist_id", 1], ["id", 100], ["LIMIT", 1]]
+Redirected to http://localhost:3000/artists/1/songs
+Completed 302 Found in 31ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/artists/1/songs" for ::1 at 2021-01-11 16:30:26 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered songs/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 81ms (Views: 62.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/artists/2/songs" for ::1 at 2021-01-11 16:30:33 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 2]]
+  Rendered songs/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 28ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists/2/songs/1" for ::1 at 2021-01-11 16:31:15 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"2", "id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT ?[0m  [["artist_id", 2], ["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/artists/2/songs
+Completed 302 Found in 23ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/artists/2/songs" for ::1 at 2021-01-11 16:31:15 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 2]]
+  Rendered songs/index.html.erb within layouts/application (123.3ms)
+Completed 200 OK in 133ms (Views: 127.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/artists/2/songs/2" for ::1 at 2021-01-11 16:33:27 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"2", "id"=>"2"}
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT ?[0m  [["artist_id", 2], ["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/artists/2/songs
+Completed 302 Found in 37ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/artists/2/songs" for ::1 at 2021-01-11 16:33:28 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 2]]
+  Rendered songs/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 30ms (Views: 24.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/artists/2/songs/1" for ::1 at 2021-01-11 16:33:30 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"2", "id"=>"1"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT ?[0m  [["artist_id", 2], ["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/artists/2/songs
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/artists/2/songs" for ::1 at 2021-01-11 16:33:30 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 2]]
+  Rendered songs/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 36ms (Views: 21.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists/1/songs" for ::1 at 2021-01-11 16:33:33 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered songs/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/artists/1/songs/2" for ::1 at 2021-01-11 16:33:37 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"2"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT ?[0m  [["artist_id", 1], ["id", 2], ["LIMIT", 1]]
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 18ms (Views: 10.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/artists/1/songs/12345" for ::1 at 2021-01-11 16:33:40 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"12345"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT ?[0m  [["artist_id", 1], ["id", 12345], ["LIMIT", 1]]
+Redirected to http://localhost:3000/artists/1/songs
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/artists/1/songs" for ::1 at 2021-01-11 16:33:40 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered songs/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
